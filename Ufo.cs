@@ -2,7 +2,7 @@ using System;
 
 namespace Spaceman
 {
-  class Ufo
+  internal class Ufo
   {
     private string s0 = "" +
     "                 .                            \n" +
