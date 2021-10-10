@@ -22,15 +22,18 @@ namespace Spaceman
       }
     }
 
+    // Comienza el juego
     public void Greet(){
       Console.WriteLine("Wellcome to de UFO game!");
     }
 
+    //Jugador gana
     public bool DidWin(){
       bool Win=CodeWord.Equals(CurrentWord);
       return Win;
     }
 
+    // Jugador pierde
     public bool DidLose(){
       bool Lose=false;
       if(CurrentNumberWrongGuesses>=MaxNumberGuesses){
@@ -39,12 +42,14 @@ namespace Spaceman
       return Lose;
     }
 
+    // Mostrar ufo, palabra completándose e intentos fallidos.
     public void Display(){
       Console.WriteLine(ufo.Stringify());
       Console.WriteLine("CurrentWord: "+CurrentWord);
       Console.WriteLine("incorrect Guesses: "+CurrentNumberWrongGuesses);
     }
 
+    // Pedir letra al usuario y procesar información.
     public void Ask(){
       Console.Write("Adivina una letra: ");
       string LetraGuess=Console.ReadLine();
